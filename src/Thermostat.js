@@ -1,5 +1,6 @@
 function Thermostat() {
   this.degrees = 20
+  this.powerSavingMode = true
 }
 
 Thermostat.prototype.degrees = function() {
@@ -7,7 +8,12 @@ Thermostat.prototype.degrees = function() {
 }
 
 Thermostat.prototype.up = function(degree) {
-  this.degrees = this.degrees + degree
+  if(this.powerSavingMode === true) {
+    if(this.degrees + degree > 25) {
+      throw new TypeError("can't go above 25")
+    }
+  }
+    this.degrees = this.degrees + degree
 }
 
 Thermostat.prototype.down = function(degree) {
@@ -16,4 +22,8 @@ Thermostat.prototype.down = function(degree) {
   } else {
   this.degrees = this.degrees - degree
   }
+}
+
+Thermostat.prototype.changeMode = function() {
+  this.powerSavingMode = !this.powerSavingMode;
 }

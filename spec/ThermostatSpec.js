@@ -16,6 +16,12 @@ describe('thermostat', function() {
       thermostat.up(3)
       expect(thermostat.degrees).toBe(23);
     });
+
+    it('throws error if above 25 and powerSavingMode is on', function() {
+      expect(function() {
+        thermostat.up(6)
+      }).toThrowError(TypeError, "can't go above 25")
+    });
   });
 
   describe('decreases temperature', function() {
@@ -28,6 +34,13 @@ describe('thermostat', function() {
       expect(function() {
         thermostat.down(1)
       }).toThrowError(TypeError, "can't go below 10")
+    });
+  });
+
+  describe('power saving switch', function() {
+    it("set to false", function() {
+      thermostat.changeMode()
+      expect(thermostat.powerSavingMode).toBe(false);
     });
   });
 });
