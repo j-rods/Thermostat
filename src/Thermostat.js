@@ -12,6 +12,10 @@ Thermostat.prototype.up = function(degree) {
     if(this.degrees + degree > 25) {
       throw new TypeError("can't go above 25")
     }
+  } else if(this.powerSavingMode === false) {
+    if(this.degrees + degree > 32) {
+      throw new TypeError("can't go above 32")
+    }
   }
     this.degrees = this.degrees + degree
 }

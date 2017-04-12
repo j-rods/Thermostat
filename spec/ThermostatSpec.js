@@ -22,6 +22,12 @@ describe('thermostat', function() {
         thermostat.up(6)
       }).toThrowError(TypeError, "can't go above 25")
     });
+    it('throws error if above 32 and powerSavingMode if off', function(){
+      thermostat.changeMode()
+      expect(function() {
+        thermostat.up(13)
+      }).toThrowError(TypeError, "can't go above 32")
+    });
   });
 
   describe('decreases temperature', function() {
