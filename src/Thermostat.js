@@ -31,3 +31,13 @@ Thermostat.prototype.down = function(degree) {
 Thermostat.prototype.changeMode = function() {
   this.powerSavingMode = !this.powerSavingMode;
 }
+
+Thermostat.prototype.resetTemp = function() {
+  this.degrees = 20
+}
+
+Thermostat.prototype.energyUsage = function() {
+  if(this.degrees > 18 && this.degrees < 25) {
+    return "medium-usage"
+  }
+}

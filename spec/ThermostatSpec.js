@@ -49,4 +49,18 @@ describe('thermostat', function() {
       expect(thermostat.powerSavingMode).toBe(false);
     });
   });
+
+  describe('reset temperature', function() {
+    it("to 20", function() {
+      thermostat.up(2)
+      thermostat.resetTemp()
+      expect(thermostat.degrees).toBe(20);
+    });
+  });
+
+  describe('energy usage', function() {
+    it('default set to medium-usage', function() {
+      expect(thermostat.energyUsage()).toBe("medium-usage")
+    });
+  });
 });
