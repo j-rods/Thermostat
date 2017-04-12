@@ -13,8 +13,21 @@ describe('thermostat', function() {
 
   describe('increases temperature', function() {
     it('by 3', function() {
-      thermostat.increase(3)
+      thermostat.up(3)
       expect(thermostat.degrees).toBe(23);
+    });
+  });
+
+  describe('decreases temperature', function() {
+    it('by 3', function() {
+      thermostat.down(3)
+      expect(thermostat.degrees).toBe(17);
+    });
+    it(":minimum degrees is 10", function() {
+      thermostat.down(10)
+      expect(function() {
+        thermostat.down(1)
+      }).toThrowError(TypeError, "can't go below 10")
     });
   });
 });
