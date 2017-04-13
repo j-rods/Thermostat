@@ -1,11 +1,118 @@
+body {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.main-container {
+  margin: 0 auto;
+  background-color: #323642;
+  width: 50%;
+  height: 288px;
+  margin-top: 85px;
+}
+
+h1 {
+    font-size: 140px;
+    text-align: center;
+    margin-top: 72px;
+}
+
+.temp-display {
+    padding: 1px 0px;
+    background-color: #1f2128;
+    width: 401px;
+    height: 286px;
+    margin-top: 85px;
+
+}
+
+.temp-up-box {
+    position: absolute;
+    left: 726px;
+    top: 85px;
+    background-color: #c4493e;
+    width: 230px;
+    height: 179px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.temp-up-box button {
+    text-decoration: none;
+    border: transparent;
+    background: transparent;
+    width: 230px;
+    height: 39px;
+    width: 230px;
+    height: 140px;
+    font-family: FontAwesome;
+    font-size: 54px;
+    color: #FFF;
+}
+
+.temp-down-box {
+    position: absolute;
+    left: 726px;
+    top: 226px;
+    background-color: #42a55e;
+    width: 230px;
+    height: 147px;
+    text-align: center;
+}
+
+.temp-down-box button {
+    text-decoration: none;
+    border: transparent;
+    background: transparent;
+    /* width: 230px; */
+    /* height: 69px; */
+    width: 230px;
+    height: 147px;
+    font-family: FontAwesome;
+    font-size: 54px;
+    color: #FFF;
+  }
+
 .low-usage {
-  color: green;
+  color: #42a55e;
 }
 
 .medium-usage {
-  colour: black;
+  color: #FFF;
 }
 
 .high-usage {
-  color: red;
+  color: #c4493e;
+}
+
+.saving-mode-label {
+    position: absolute;
+    left: 343px;
+    top: 324px;
+    font-size: 17px;
+    color: #FFF;
+}
+
+.switch-mode-button {
+    position: absolute;
+    left: 519px;
+    top: 341px;
+}
+
+.switch-mode-button button {
+    width: 84px;
+    text-decoration: none;
+    border: transparent;
+}
+
+.reset-box {
+    position: absolute;
+    left: 620px;
+    top: 341px;
+}
+
+.reset-box button{
+    width: 84px;
+    text-decoration: none;
+    border: transparent;
+    background-color: #FFF;
 }

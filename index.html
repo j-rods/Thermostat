@@ -5,33 +5,42 @@
     <title>Thermostat</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <link rel="stylesheet" type='text/css' href='styles.css'>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-
-
-
-    <h1 id="temperature"></h1>
-    <!-- show the degrees -->
-    <!-- show power saving mode -->
-    <!-- button to toggle power saving mode -->
-
-    <div id="toggle-saving-mode">
-      <p> Power Saving Mode </p>
-      <button id="switch-power-mode" type="button">On</button>
-    </div>
-    <!-- button that increases temperature -->
-    <!-- button that decreases temperature -->
-    <div id="change-temp">
-      <button id="temp-up" type="button">+</button>
-      <button id="temp-down" type="button">-</button>
-      <button id="temp-reset" type="button">reset</button>
-    </div>
-    <div class="energy-usage">
-
-    </div>
-    <script src="./src/Thermostat.js"></script>
-    <script src="interface.js"></script>
+    <section>
+      <div class="main-container">
+        <div class="temp-display">
+          <h1 id="temperature"></h1>
+        </div>
+        <div class="toggle-temp">
+          <div class="temp-up-box">
+            <button id="temp-up" type="button"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+          </div>
+          <div class="temp-down-box">
+            <button id="temp-down" type="button"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+          </div>
+          <div class="toggle-saving-mode">
+            <div class="saving-mode-label">
+              <p>Power Saving Mode</p>
+            </div>
+            <div class="switch-mode-button">
+              <button id="switch-power-mode" type="button">On</button>
+            </div>
+          </div>
+          <div class="reset-box">
+            <button id="temp-reset" type="button">Reset</button>
+          </div>
+        </div>
+        <div class="">
+          <p>Energy Usage</p>
+        </div>
+        <script src="./src/Thermostat.js"></script>
+        <script src="interface.js"></script>
+      </div>
+    </section>
   </body>
 
 
