@@ -19,7 +19,7 @@ $(document).ready(function() {
 
   $('#switch-power-mode').click(function() {
     thermostat.changeMode();
-    if ($(this).text() == 'On') {
+    if (thermostat.powerSavingMode) {
       $('#switch-power-mode').text('Off')
     } else {
       $('#switch-power-mode').text('On')
